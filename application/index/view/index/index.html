@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="{$site['keword']}">
+    <meta name="description" content="{$site['desc']}">
+    <title>宿迁晴空网络科技有限公司 高防BGP服务器服务商</title>
+    {include file="common:maincss"/}
+</head>
+
+<body onload='init()'>
+    
+    {include file="common:header"/}
+    <!--end header-->
+    <!--start home area-->
+        <div id="demo" class="carousel slide" data-ride="carousel">
+ 
+            <!-- 指示符 -->
+            <ul class="carousel-indicators">
+              {volist name="slider" id="vo" key="k"}
+              <li data-target="#demo" data-slide-to="{$k-1}" {if condition="$k eq 1"}class="active"{/if}></li>
+              {/volist}
+            </ul>
+           
+            <!-- 轮播图片 -->
+            <div class="carousel-inner">
+              {volist name="slider" id="vo" key="k"} 
+              <div class="carousel-item {if condition="$k eq 1"}active{/if}">
+                <img style="width: 100%;" src="{$vo.img_url}">
+              </div>
+              {/volist}
+            </div>
+           
+            <!-- 左右切换按钮 -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+           
+          </div>
+          
+    <!--end home area-->
+    
+    <!--start pricing area-->
+    <section class="pricing-area bg-gray">
+        <div class="container">
+            <div class="row">
+                <!--start section heading-->
+                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+                    <div class="section-heading text-center">
+                        <h2>热销产品</h2>
+                        <p></p>
+                    </div>
+                </div>
+                <!--end section heading-->
+            </div>
+            <div class="row">
+                <!--start pricing table single-->
+                {volist name="hot" id="vo"}
+                <div class="col-md-4">
+                    <div class="pricing-tbl-single rcom">
+                        <h4>{$vo.title}</h4>
+                        <div class="price">
+                            <h2>{$vo.price}<sub> /月</sub></h2>
+                        </div>
+                        <div class="price-details">
+                            <ul>
+                                <li><i class="icon-harddisk"></i> 配置 <span>{$vo.dispose}</span></li>
+                                <li><i class="icon-database1"></i> 带宽 <span>{$vo.bandwidth}</span></li>
+                                <li><i class="icon-server12"></i> 防御 <span>{$vo.defense}</span></li>
+                                <li><i class="icon-calculation"></i> 测试IP <span>{$vo.ip}</span></li>
+                                <li><i class="icon-servers"></i> 应用 <span>{$vo.apply}</span></li>
+                            </ul>
+                            <h6>7*24H咨询服务</h6>
+                        </div>
+                        <button> 立即咨询</button>
+                    </div>
+                </div>
+                {/volist}
+                <!--end pricing table single-->
+            </div>
+        </div>
+    </section>
+    <!--end pricing area-->
+
+    <!--start service area-->
+    <section class="service-area">
+        <div class="container">
+            <div class="row">
+                <!--start section heading-->
+                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+                    <div class="section-heading text-center">
+                        <h2>我们的服务</h2>
+                        <p>我们坚持为您提供全心全意的idc运维服务,不断追求让更优质的产品满足您的需求</p>
+                    </div>
+                </div>
+                <!--end section heading-->
+            </div>
+            <div class="row">
+                <!--start service single-->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-single">
+                        <div class="icon">
+                            <img src="__IMG__/icon-1.png" class="img-fluid" alt="">
+                        </div>
+                        <h4>服务器租用</h4>
+                        <p>晴空网络为您提供高配置、高防御、大带宽物理机服务器，包括单线、双线、三线、BGP等各种线路，经营机房包括江苏、浙江、山东、湖北、湖南等。</p>
+                    </div>
+                </div>
+                <!--end service single-->
+                <!--start service single-->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-single">
+                        <div class="icon">
+                            <img src="__IMG__/icon-1.png" class="img-fluid" alt="">
+                        </div>
+                        <h4>服务器托管</h4>
+                        <p>为您提供安全稳定、高防御、大带宽的运维托管服务，包括单线、双线、三线、BGP等各种线路，经营机房包括江苏、浙江、山东、湖北、湖南等。</p>
+                    </div>
+                </div>
+                <!--end service single-->
+                <!--start service single-->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-single">
+                        <div class="icon">
+                            <img src="__IMG__/icon-6.png" class="img-fluid" alt="">
+                        </div>
+                        <h4>优选云主机</h4>
+                        <p>晴空网络与著名老牌云主机公司合作，定制产品，提供稳定安全的云主机产品，物美价廉，在线管理监控。<br/>&nbsp;</p>
+                    </div>
+                </div>
+                <!--end service single-->
+                <!--start service single-->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-single">
+                        <div class="icon">
+                            <img src="__IMG__/icon-5.png" class="img-fluid" alt="">
+                        </div>
+                        <h4>DDOS高防御</h4>
+                        <p>晴空网络经营的所有机房电信、联通、移动三线均达到T级防护，真实有效，单机防御100G起到600G，满足客户的多种选择。</p>
+                    </div>
+                </div>
+                <!--end service single-->
+                <!--start service single-->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-single">
+                        <div class="icon">
+                            <img src="__IMG__/icon-4.png" class="img-fluid" alt="">
+                        </div>
+                        <h4>专业定制策略</h4>
+                        <p>针对客户业务和攻击方式定制专属策略，目前对游戏、网站80等都能有效防御，还有加强策略，有效防御各种CC攻击和小流量小包攻击。</p>
+                    </div>
+                </div>
+                <!--end service single-->
+                <!--start service single-->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-single">
+                        <div class="icon">
+                            <img src="__IMG__/icon-3.png" class="img-fluid" alt="">
+                        </div>
+                        <h4>7*24H售后运维服务</h4>
+                        <p>晴空网络有专业的运维团队，为您提供7*24H售后无忧服务，您的需求就是我们的追求。<br/>&nbsp;</p>
+                    </div>
+                </div>
+                <!--end service single-->
+            </div>
+        </div>
+    </section>
+    <!--end service area-->
+    
+    <!--start special offer area-->
+    <section class="specl-offer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="specl-offer-cont">
+                        <h2>晴空网络推出的高防BGP大带宽产品 ，专属化服务行业解决方案，支持个性化需求方案定制</h2>
+                        <h4>100元 /月起</h4>
+                        <!-- <p class="text-light mt-4">Praesent dapibus, neque id cursus faucibus, tortor neque egestas auguae, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor.</p> -->
+                        <a href=""> 立即咨询</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="specl-offer-img text-right">
+                        <img src="__IMG__/server-2.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end special offer area-->
+    <!--start feature area-->
+    <section class="feature-area">
+        <div class="container">
+            <!--start feature wrap-->
+            <div class="feat-wrap">
+                <div class="row">
+                    <!--start feature image-->
+                    <div class="col-md-6">
+                        <div class="feat-img mr-5 text-center">
+                            <img src="__IMG__/server-1.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <!--end feature image-->
+                    <!--start feature content-->
+                    <div class="col-md-6">
+                        <div class="feat-cont-single">
+                            <div class="icon">
+                                <img src="__IMG__/video.png">
+                            </div>
+                            <h3>视频</h3>
+                            <p>针对视频行业的高清晰大流量、低延迟、高稳定需求、海量视频、百万用户在线点播、直播的行业特征，提供快速弹性伸缩的服务器扩容服务，对象存储以及CDN加速服务，广泛应用在各视频点播和直播等场景。</p>
+                        </div>
+                        <div class="feat-cont-single">
+                            <div class="icon">
+                                <img src="__IMG__/game.png">
+                            </div>
+                            <h3>游戏</h3>
+                            <p>为游戏而生的单线、双线、三线、高防BGP服务器，为游戏行业用户量身定制，满足各类游戏场景需求，防御各种大流量DDOS攻击、CC、小包攻击，专注于游戏开发、运营企业、提供专属集群和单机防御服务，多场景多类型的游戏部署解决方案，满足客户的发展规划和需求。</p>
+                        </div>
+                    </div>
+                    <!--end feature content-->
+                </div>
+            </div>
+            <!--end feature wrap-->
+            <!--start feature wrap-->
+            <div class="feat-wrap">
+                <div class="row">
+                    <!--start feature content-->
+                    <div class="col-md-6">
+                        <div class="feat-cont-single">
+                            <div class="icon">
+                                <img src="__IMG__/website.png">
+                            </div>
+                            <h3>网站 </h3>
+                            <p>提供适合中小企业建站的服务，针对业务需求做好定制服务，尤其对WEB的安全防御策略有丰富的经验，上云服务还是独立机均可满足客户的发展需求，安全稳定、收费标准、标准化服务流程。</p>
+                        </div>
+                        <div class="feat-cont-single">
+                            <div class="icon">
+                                <img src="__IMG__/wepro.png">
+                            </div>
+                            <h3>小程序</h3>
+                            <p>为众多小程序、APP提供专属的服务器安全运维服务，针对客户需求做专业定制，满足客户的发展规划需求。</p>
+                        </div>
+                    </div>
+                    <!--end feature content-->
+                    <!--start feature image-->
+                    <div class="col-md-6 text-center">
+                        <div class="feat-img">
+                            <img src="__IMG__/server-2.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <!--end feature image-->
+                </div>
+            </div>
+            <!--end feature wrap-->
+        </div>
+    </section>
+    <!--end feature area-->
+    
+    <!--start blog area-->
+    <section class="blog-area">
+        <div class="container">
+            <div class="row">
+                <!--start section heading-->
+                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+                    <div class="section-heading text-center">
+                        <h2>专业级数据中心机房</h2>
+                        <p></p>
+                    </div>
+                </div>
+                <!--end section heading-->
+            </div>
+            <div class="row">
+                <!--start blog single-->
+                <div class="col-md-4">
+                    <div class="blog-single">
+                        <div class="post-media">
+                            <a href=""><img src="__IMG__/area_1.jpg" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="post-cont text-center">
+                            <!-- <h6><a href=""><i class="icofont-user"></i> Admin</a><small>|</small><a href=""><i class="icofont-ui-calendar"></i> 25 Mar, 2019</a></h6>
+                            <h3><a href="">How to setup dedicated hosting</a></h3> -->
+                            <p>电信、联通、移动三线骨干网接入</p>
+                        </div>
+                    </div>
+                </div>
+                <!--end blog single-->
+                <!--start blog single-->
+                <div class="col-md-4">
+                    <div class="blog-single">
+                        <div class="post-media">
+                            <a href=""><img src="__IMG__/area_2.gif" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="post-cont text-center">
+                            <!-- <h6><a href=""><i class="icofont-user"></i> Admin</a><small>|</small><a href=""><i class="icofont-ui-calendar"></i> 26 Mar, 2019</a></h6>
+                            <h3><a href="">How to configure cloud hosting plan</a></h3> -->
+                            <p>7*24H运维监控机房温度湿度</p>
+                        </div>
+                    </div>
+                </div>
+                <!--end blog single-->
+                <!--start blog single-->
+                <div class="col-md-4">
+                    <div class="blog-single">
+                        <div class="post-media">
+                            <a href=""><img src="__IMG__/area_3.jpg" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="post-cont text-center">
+                            <!-- <h6><a href=""><i class="icofont-user"></i> Admin</a><small>|</small><a href=""><i class="icofont-ui-calendar"></i> 28 Mar, 2019</a></h6>
+                            <h3><a href="">How to setup vps hosting account</a></h3> -->
+                            <p>智能冗余电路保证机房正常运行</p>
+                        </div>
+                    </div>
+                </div>
+                <!--end blog single-->
+            </div>
+        </div>
+    </section>
+    <!--end blog area-->
+    <script charset="utf-8" src="https://map.qq.com/api/js?v=2.exp&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77"></script>
+    <style>
+    #container{
+        min-width:600px;
+        min-height:500px;
+    }
+    </style>
+    <script>
+        var init = function() {
+            var center = new qq.maps.LatLng(33.974577,118.283229);
+            var map = new qq.maps.Map(document.getElementById('container'),{
+                center: center,
+                zoom: 15
+            });
+            //创建标记
+            var marker = new qq.maps.Marker({
+                position: center,
+                map: map
+            });
+            //添加到提示窗
+            var info = new qq.maps.InfoWindow({
+                map: map
+            });
+            //获取标记的点击事件
+            qq.maps.event.addListener(marker, 'click', function() {
+                info.open(); 
+                info.setContent('<div style="text-align:center;white-space:nowrap;'+
+                'margin:10px;">宿迁晴空网络科技有限公司</div>');
+                info.setPosition(center); 
+            });
+        }        
+    </script>
+    <!--start map area-->
+    <section class="map-area">
+        <div class="container" style="width: 100%;max-width:initial;">
+            <div class="row">
+                <!--start section heading-->
+                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+                    <div class="section-heading text-center">
+                        <h2>公司地址</h2>
+                        <p></p>
+                    </div>
+                </div>
+                <!--end section heading-->
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="container"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {include file="common:footer"/}
+    {include file="common:mainjs"/}
+    {include file="common:sider"/}
+</body>
+
+</html>

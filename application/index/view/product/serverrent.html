@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="{$site['keword']}">
+    <meta name="description" content="{$site['desc']}">
+    <title>宿迁晴空网络科技有限公司 高防BGP服务器服务商</title>
+    {include file="common:maincss"/}
+</head>
+
+<body>
+    
+    <!--start header-->
+    {include file="common:header"/}
+    <!--end header-->
+    <!--start page content-->
+    <section id="page-cont">
+        <!--start page title-->
+        <div class="page-title">
+            <div class="container">
+                <div class="page-breadcrumb text-center">
+                    <h2>服务器租用</h2>
+                    <ul>
+                        <li><a href="{:url('Index/index')}"><i class="icofont-home"></i> 首页</a></li>
+                        <li><small>></small></li>
+                        <li>服务器租用</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--end page title-->
+        <!--start page content wrap-->
+        <div class="page-cont-wrap p-0">
+            <div class="pricing-area">
+                <div class="container">
+                    <div class="row">
+                        <!--start section heading-->
+                        <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+                            <div class="section-heading text-center">
+                                <h2>我们的产品</h2>
+                                <p>浙江杭州  江苏宿迁  山东枣庄  高防CN2</p>
+                            </div>
+                        </div>
+                        <!--end section heading-->
+                    </div>
+                    <div class="row" id="pro">
+                        <!--start pricing table single-->
+                        <div class="case_box">
+                            <div class="category w1200">
+                                <ul>
+                                    {volist name="type_list" id="vo"}
+                                    <a href="{:url('product/serverrent')}?typeid={$vo.id}#pro"><li {if condition='$typeid eq $vo["id"]'}class="active"{/if}>{$vo.name}</li></a>
+                                    {/volist}
+                                </ul>
+                            </div>
+                            <div class="w1200" style="text-align: center;">
+                            {if !empty('child_list')}
+                            <div class="btn-group">
+                                {volist name="child_list" id="vo"}
+                                <a href="{:url('product/serverrent')}?typeid={$typeid}&childid={$vo.id}#pro"><button type="button" {if condition="$vo['id'] eq $childid"}class="btn btn-primary"{else /}class="btn btn-default"{/if}>{$vo.name}</button></a>
+                                {/volist}
+                            </div>
+                            {/if}
+                            </div>
+                            <div class="content w1200">
+                                <div class="product-list">
+                                    <div class="product-item">
+                                        <div class="mainbox">
+                                            <div class="mainbox-title">{$item_title}</div>
+                                            <div class="responsive">
+                                                <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th style="background:#495057;">产品名称</th>
+                                                        <th style="background:#8035fb;">CPU</th>
+                                                        <th style="background:#eb4848;">内存</th>
+                                                        <th style="background:#f37815;">硬盘</th>
+                                                        <th style="background:#fe0597;">IP数</th>
+                                                        <th style="background:#0574fe;">线路</th>
+                                                        <th style="background:#35c6f0;">单机防御</th>
+                                                        <th style="background:#342fd2;">带宽</th>
+                                                        <th style="background:#28a745;">单价</th>
+                                                        <th style="background:#6d70a6;">咨询</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {volist name="list" id="vo"}
+
+                                                    <tr>
+                                                        <td>{$vo.name}</td>
+                                                        <td>{$vo.cpu}</td>
+                                                        <td>{$vo.ram}</td>
+                                                        <td>{$vo.disk}</td>
+                                                        <td>{$vo.ipnums}</td>
+                                                        <td>{$vo.route|default="-"}</td>
+                                                        <td>{$vo.defense}</td>
+                                                        <td>{$vo.bandwidth}</td>
+                                                        <td class="red">{$vo.price}</td>
+                                                        <td><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=835703585&amp;site=qq&amp;menu=yes" target="blank">优惠咨询</a></td>
+                                                    </tr>
+                                                    
+                                                    {/volist}
+                                                    <tr>
+                                                        <td style="box-shadow: #495057 0px 6px 0px; border-radius:0px 0px 5px 5px;padding:2px;"></td>
+                                                        <td style="box-shadow: #8035fb 0px 6px 0px; border-radius:0px 0px 5px 5px;padding:2px;"></td>
+                                                        <td style="box-shadow: #eb4848 0px 6px 0px; border-radius:0px 0px 5px 5px;padding:2px;"></td>
+                                                        <td style="box-shadow: #f37815 0px 6px 0px; border-radius:0px 0px 5px 5px;padding:2px;"></td>
+                                                        <td style="box-shadow: #fe0597 0px 6px 0px; border-radius:0px 0px 5px 5px;padding:2px;"></td>
+                                                        <td style="box-shadow: #0574fe 0px 6px 0px; border-radius:0px 0px 5px 5px;padding:2px;"></td>
+                                                        <td style="box-shadow: #35c6f0 0px 6px 0px; border-radius:0px 0px 5px 5px;padding:2px;"></td>
+                                                        <td style="box-shadow: #342fd2 0px 6px 0px; border-radius:0px 0px 5px 5px;padding:2px;"></td>
+                                                        <td class="red" style="box-shadow: #28a745 0px 6px 0px; border-radius:0px 0px 5px 5px;padding:2px;"></td>
+                                                        <td style="box-shadow: #6d70a6 0px 6px 0px; border-radius:0px 0px 5px 5px;padding:2px;"></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="bottombox">
+                                            <div>附加：</div>
+                                            <div>另加IP&nbsp;&nbsp;普通IP：150元/个/月；高防IP：750元/个/月； 普通BGP：200元/个/月
+                                                    BGP100G：300元/个/月；BGP150G：400元/个/月；BGP300G：800元/个/月
+                                                    <br>内存&nbsp;&nbsp;16G/100元/月
+                                                    <br>硬盘&nbsp;&nbsp;120G固态/100元/月；500G机械/100元/月
+                                                    <br>CPU&nbsp;&nbsp;升到32H加200元；
+                                                    <br>带宽&nbsp;&nbsp;单线带宽：12元/M/月（10M起）；双线带宽：16元/M/月（10M起）
+                                                    <br>三线带宽&nbsp;&nbsp;20元/M/月（10M起）；BGP带宽：22元/M/月（10M起）</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end pricing table single-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end page content wrap-->
+    </section>
+    <!--end page content-->
+    {include file="common:footer"/}
+    {include file="common:mainjs"/}
+    {include file="common:sider"/}
+    <!--选项卡-->
+    <script type="text/javascript">
+        $(function() {
+            $('.category ul li').click(function() {
+                var i = $(this).index();
+                $(this).addClass('active').siblings().removeClass('active');
+                $('.content .cont').eq(i).addClass('active').siblings().removeClass('active');
+            })
+            $('.product-tab li').hover(function() {
+                $('.product-tab li.line').stop().animate({
+                    'left': $(this).position().left
+                });
+                $('.product-list .product-item').stop().eq($(this).index()).show().siblings().hide();
+            });
+            // $("tbody tr").hover(
+            //     function(){
+            //         $(this).css({"border":"3px solid yellow","color":"red"})
+            //     },
+            //     function(){
+            //         $(this).css({"border":"initial","color":"initial"})
+            //     }
+            // )
+        });
+    </script>
+</body>
+
+</html>

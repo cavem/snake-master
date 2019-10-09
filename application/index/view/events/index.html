@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="{$site['keword']}">
+    <meta name="description" content="{$site['desc']}">
+    <title>宿迁晴空网络科技有限公司 高防BGP服务器服务商</title>
+    {include file="common:maincss"/}
+</head>
+
+<body>
+    
+    {include file="common:header"/}
+    <!--end header-->
+    <!--start home area-->
+    <div id="demo" class="carousel slide" data-ride="carousel">
+ 
+            <!-- 指示符 -->
+            <ul class="carousel-indicators">
+              {volist name="slider" id="vo" key="k"}
+              <li data-target="#demo" data-slide-to="{$k-1}" {if condition="$k eq 1"}class="active"{/if}></li>
+              {/volist}
+            </ul>
+           
+            <!-- 轮播图片 -->
+            <div class="carousel-inner">
+              {volist name="slider" id="vo" key="k"} 
+              <div class="carousel-item {if condition="$k eq 1"}active{/if}">
+                <img style="width: 100%;" src="{$vo.img_url}">
+              </div>
+              {/volist}
+            </div>
+           
+            <!-- 左右切换按钮 -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+           
+          </div>
+    <!--end home area-->
+    
+    <!--start service area-->
+    <section class="service-area">
+        <div class="container">
+            <div class="row">
+                <!--start section heading-->
+                <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+                    <div class="section-heading text-center">
+                        <h2>活动展示</h2>
+                        <p>我们坚持为您提供全心全意的idc运维服务,不断追求让更优质的产品满足您的需求</p>
+                    </div>
+                </div>
+                <!--end section heading-->
+                <dv style="width:50%;margin:0 auto;height:700px;background: #fff url(__IMG__/event_bg2.jpg) center no-repeat;background-size: contain;padding: 100px;color:#fff;">
+                    {$content}
+                </dv>
+            </div>
+        </div>
+    </section>
+    <!--end service area-->
+    {include file="common:footer"/}
+    {include file="common:mainjs"/}
+    {include file="common:sider"/}
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="{$site['keword']}">
+    <meta name="description" content="{$site['desc']}">
+    <title>宿迁晴空网络科技有限公司 高防BGP服务器服务商</title>
+    {include file="common:maincss"/}
+
+</head>
+
+<body>
+    
+    {include file="common:header"/}
+    <!--start page content-->
+    <section id="page-cont">
+        <!--start page title-->
+        <div class="page-title">
+            <div class="container">
+                <div class="page-breadcrumb text-center">
+                    <h2>关于我们</h2>
+                    <ul>
+                        <li><a href="{:url('Index/index')}"><i class="icofont-home"></i> 首页</a></li>
+                        <li><small>></small></li>
+                        <li>关于我们</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--end page title-->
+        <!--start page content wrap-->
+        <div class="page-cont-wrap p-0" id="a">
+            <!--start how work area-->
+            <div class="how-work-area">
+                <div class="container">
+                    <div class="row">
+                        <!--start section heading-->
+                        <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+                            <div class="section-heading text-center">
+                                <h2>{if condition='($id eq 1) OR ($id eq "")'}关于我们{elseif condition='$id eq 2'}联系我们{else /}合同模板{/if}</h2>
+                                <p></p>
+                            </div>
+                        </div>
+                        <!--end section heading-->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="btn-group-vertical">
+                                <a href="{:url('about/index',array('id'=>1))}#a"><button type="button" class="btn btn-lg {if condition='($id eq 1) OR ($id eq "")'}btn-primary{else /}btn-default{/if}">关于我们</button></a>
+                                <a href="{:url('about/index',array('id'=>2))}#a"><button type="button" class="btn btn-lg {if condition='$id eq 2'}btn-primary{else /}btn-default{/if}">联系我们</button></a>
+                                <a href="{:url('about/index',array('id'=>3))}#a"><button type="button" class="btn btn-lg {if condition='$id eq 3'}btn-primary{else /}btn-default{/if}">合同模板</button></a>
+                            </div>
+                        </div>
+                        <div class="col-md-10">
+                            {if condition='($id eq 1) OR ($id eq "")'}
+                            <p style="text-indent:28px">
+                                <span style="font-family: 宋体; font-size: 18px;">宿迁晴空网络科技有限公司是一家专业从事服务器租用、服务器托管业务的公司，坚持为数万客户提供高防御、智能化、真实性的互联网网络服务，自主研发数据存储、智能备份、系统安全等多套先进网络技术服务，为更多客户提供更好的网络体验服务。</span>
+                            </p>
+                            <p style="text-indent:28px">
+                                <span style="font-family: 宋体; font-size: 18px;">宿迁晴空网络科技有限公司主营产品海内外高防BGP，精选全国最优的<span style="font-size: 16px; font-family: Calibri;">BGP</span>线路和节点、以更快速的网络、更安全的防御满足客户的需求。</span>
+                            </p>
+                            <p style="text-indent:28px">
+                                <span style="font-size: 18px;"><span style="font-size: 18px; font-family: 宋体;">宿迁晴空网络科技有限公司以客户为第一，服务为第一、安全为第一的“三一”准则，售前售后均坚持</span><span style="font-size: 18px; font-family: Calibri;">365*24H</span><span style="font-size: 18px; font-family: 宋体;">随时在线服务，随叫随到。</span><br/></span>
+                            </p>
+                            <p style="text-indent:28px">
+                                <span style="font-family: 宋体; font-size: 18px;">宿迁晴空网络全体员工真诚为您服务！助您开启畅快的互联网网络之旅！<br/></span>
+                            </p>
+                            <p>
+                                <span style="font-family: 宋体; font-size: 18px;">&nbsp; 销售只是开始，服务没有终点！</span><br/>
+                            </p>
+                            <p>
+                                <br/>
+                            </p>
+                            {/if}
+                            {if condition='$id eq 2'}
+                            <p style="text-indent:28px">
+                                <span style="font-family: 宋体; font-size: 18px;"></span>
+                            </p>
+                            <p style="text-indent:28px">
+                                <span style="font-family: 宋体; font-size: 18px;">QQ：<span style="font-family: Calibri;">835703585</span></span>
+                            </p>
+                            <p style="text-indent:28px">
+                                <span style="font-family: 宋体; font-size: 18px;">手机：18800602682</span>
+                            </p>
+                            <p style="text-indent:28px">
+                                <span style="font-family: 宋体; font-size: 18px;">地址：宿迁市宿城区恒大影城商业2楼</span>
+                            </p>
+                            <p style="text-indent:28px">
+                                <span style="font-family: 宋体; font-size: 18px;"></span><br/>
+                            </p>
+                            <p>
+                                <br/>
+                            </p>
+                            {/if}
+                            {if condition='$id eq 3'}
+                            <div class="row">
+                            <!--start how work single-->
+                            <div class="col-md-4">
+                                <div class="how-work-single text-center">
+                                    <div class="icon">
+                                        <!-- <div class="number">01</div> -->
+                                        <img src="__IMG__/hetong.png" class="img-fluid" alt="">
+                                    </div>
+                                    <h4>租用合同模板</h4>
+                                    <a href="__IMG__/晴空网络服务器租用合同模板.doc"><span class="icofont-download"></span> 晴空网络服务器租用合同模板.doc</a>
+                                </div>
+                            </div>
+                            <!--end how work single-->
+                            <!--start how work single-->
+                            <div class="col-md-4">
+                                <div class="how-work-single text-center">
+                                    <div class="icon">
+                                        <!-- <div class="number">02</div> -->
+                                        <img src="__IMG__/hetong.png" class="img-fluid" alt="">
+                                    </div>
+                                    <h4>托管合同模板</h4>
+                                    <a href="__IMG__/晴空网络服务器托管合同模板.doc"><span class="icofont-download"></span> 晴空网络服务器托管合同模板.doc</a>
+                                </div>
+                            </div>
+                            <!--end how work single-->
+                            <!--start how work single-->
+                            <div class="col-md-4">
+                                <div class="how-work-single text-center">
+                                    <div class="icon">
+                                        <!-- <div class="number">03</div> -->
+                                        <img src="__IMG__/hetong.png" class="img-fluid" alt="">
+                                    </div>
+                                    <h4>代理合同模板</h4>
+                                    <a href="__IMG__/晴空网络公司代理合同模板.doc"><span class="icofont-download"></span> 晴空网络公司代理合同模板.doc</a>
+                                </div>
+                            </div>
+                            <!--end how work single-->
+                        </div>
+                        {/if}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!--end how work area-->
+        <!--end page content wrap-->
+    </section>
+    <!--end page content-->
+    {include file="common:footer"/}
+    {include file="common:mainjs"/}
+    {include file="common:sider"/}
+</body>
+
+</html>
